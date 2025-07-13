@@ -36,78 +36,95 @@
       background-color: var(--secondary-color);
       color: #000;
     }
-    <style>
+   <style>
   :root {
-    --primary-color: #FF4500; /* Orange-Red */
-    --secondary-color: #FF8C00; /* Dark Orange */
-    --light-color: #FFFFFF; /* White */
-    --dark-color: #333333; /* Dark text */
+    --primary-green: #2e8b57;       /* Forest Green */
+    --secondary-green: #3cb371;     /* Medium Sea Green */
+    --light-green: #90ee90;         /* Light Green */
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-text: #333333;
   }
-  
-  /* Header and navigation */
-  .header-transparent {
-    background-color: rgba(255, 69, 0, 0.9) !important;
+
+  /* Background Colors */
+  body {
+    background-color: var(--white);
+    color: var(--dark-text);
   }
-  
-  /* Hero section */
-  .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+  /* Hero Section */
+  #hero {
+    background: linear-gradient(rgba(46, 139, 87, 0.8), rgba(46, 139, 87, 0.6));
   }
-  
+
   /* Buttons */
-  .btn-primary, .cta-btn, .about-btn, .btn-get-started {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    color: white;
+  .btn-get-started, .cta-btn, .about-btn {
+    background-color: var(--secondary-green);
+    border-color: var(--secondary-green);
+    color: var(--white);
   }
-  .btn-primary:hover, .cta-btn:hover, .about-btn:hover, .btn-get-started:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+  .btn-get-started:hover, .cta-btn:hover, .about-btn:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
   }
-  
+
+  /* Header */
+  .header-transparent {
+    background-color: rgba(46, 139, 87, 0.9) !important;
+  }
+
   /* Sections */
   .cta, .footer {
-    background-color: var(--primary-color);
+    background-color: var(--primary-green);
+    color: var(--white);
   }
   .footer-top {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-green);
   }
-  
-  /* Icon boxes */
-  .icon-box {
-    border-bottom: 3px solid var(--secondary-color);
+
+  /* Gallery Section */
+  .gallery {
+    background-color: var(--light-gray);
   }
-  .icon-box:hover {
-    border-color: var(--primary-color);
+  .gallery-info {
+    background: linear-gradient(to top, rgba(46, 139, 87, 0.8), transparent);
   }
-  
-  /* Count boxes */
-  .count-box {
-    border-left: 3px solid var(--secondary-color);
+
+  /* Cards & Boxes */
+  .icon-box, .card {
+    border-left: 3px solid var(--secondary-green);
   }
-  .count-box:hover {
-    border-color: var(--primary-color);
+  .icon-box:hover, .card:hover {
+    border-color: var(--primary-green);
   }
-  
-  /* Links */
-  a {
-    color: var(--primary-color);
+
+  /* Text Colors */
+  h1, h2, h3, h4 {
+    color: var(--primary-green);
   }
-  a:hover {
-    color: var(--secondary-color);
+  .hero-container h1, 
+  .hero-container h2,
+  .cta h3,
+  .footer a {
+    color: var(--white);
   }
-  
-  /* Swiper controls */
+
+  /* Navigation */
+  .navbar a:hover {
+    color: var(--light-green);
+  }
+
+  /* Swiper Controls */
   .swiper-pagination-bullet {
     background: rgba(255, 255, 255, 0.5);
   }
   .swiper-pagination-bullet-active {
-    background: white;
+    background: var(--white);
   }
-  .swiper-button-prev, .swiper-button-next {
-    color: white;
+  .swiper-button-prev, 
+  .swiper-button-next {
+    color: var(--white);
   }
-</style>
   </style>
 </head>
 
@@ -118,7 +135,7 @@
     <div class="container d-flex align-items-center justify-content-between position-relative">
 
       <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>ASSOCIATION Y-PALA LTD</span></a></h1>
+        <h1 class="text-light"><a href="index.html"><span><marquee>ASSOCIATION Y-PALA LTD</marquee></span></a></h1>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -138,7 +155,7 @@
   <div class="hero-slider swiper">
     <div class="swiper-wrapper">
       <!-- Slide 1 - Building Materials -->
-      <div class="swiper-slide" style="background: linear-gradient(rgba(255, 69, 0, 0.6), rgba(255, 140, 0, 0.4)), url('assets/pic1.jpg') top center; background-size: cover;">
+      <div class="swiper-slide" style="background: linear-gradient(rgba(51, 42, 42, 0.6), rgba(51, 45, 40, 0.4)), url('assets/pic1.jpg') top center; background-size: cover;">
         <div class="hero-container" data-aos="fade-up">
           <h1>Quality Building Materials</h1>
           <h2>Importing and exporting premium construction materials worldwide</h2>
@@ -146,7 +163,7 @@
         </div>
       </div>
 
-      <div class="swiper-slide" style="background: linear-gradient(rgba(255, 69, 0, 0.6), rgba(255, 140, 0, 0.4)), url('assets/img/house.png') top center; background-size: cover;">
+      <div class="swiper-slide" style="background: linear-gradient(rgba(90, 83, 83, 0.6), rgba(5, 3, 1, 0.4)), url('assets/img/house.png') top center; background-size: cover;">
         <div class="hero-container" data-aos="fade-up">
           <h1>Real Estate Solutions</h1>
           <h2>Your trusted partner for property sales and landlordships</h2>
@@ -156,7 +173,7 @@
       </div>
 
       <!-- Slide 3 - Computer Services -->
-      <div class="swiper-slide" style="background: linear-gradient(rgba(255, 69, 0, 0.6), rgba(255, 140, 0, 0.4)), url('assets/img/d desk.jpg') top center; background-size: cover;">
+      <div class="swiper-slide" style="background: linear-gradient(rgba(90, 83, 83, 0.6), rgba(5, 3, 1, 0.4)), url('assets/img/d desk.jpg') top center; background-size: cover;">
         <div class="hero-container" data-aos="fade-up">
           <h1>Computer Services</h1>
           <h2>Comprehensive IT solutions for your business needs</h2>
